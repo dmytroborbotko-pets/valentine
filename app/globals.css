@@ -35,7 +35,7 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translateY(calc(100dvh + 120px)) rotate(180deg) scale(var(--flower-scale, 0.5));
+    transform: translateY(calc(100dvh + 120px)) rotate(var(--flower-rotation, 180deg)) scale(var(--flower-scale, 0.5));
     opacity: 0;
   }
 }

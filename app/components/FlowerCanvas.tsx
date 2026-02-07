@@ -179,6 +179,7 @@ const FlowerCanvas = forwardRef<FlowerCanvasHandle>(
       const duration = 6 + Math.random() * 5;
       const swayAmount = 25 + Math.random() * 50;
       const swayDuration = 3 + Math.random() * 3;
+      const rotation = (120 + Math.random() * 120) * (Math.random() < 0.5 ? 1 : -1);
 
       el.className = "falling-flower";
       el.style.left = `${x}px`;
@@ -189,6 +190,7 @@ const FlowerCanvas = forwardRef<FlowerCanvasHandle>(
       el.style.setProperty("--flower-duration", `${duration}s`);
       el.style.setProperty("--flower-sway", `${swayAmount}px`);
       el.style.setProperty("--flower-sway-duration", `${swayDuration}s`);
+      el.style.setProperty("--flower-rotation", `${rotation}deg`);
 
       container.appendChild(el);
       fallingCountRef.current++;
